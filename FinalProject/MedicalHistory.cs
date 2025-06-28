@@ -1,0 +1,21 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace FinalProject
+{
+    public class MedicalHistory
+    {
+        [Key]
+        public int HistoryId { get; set; }
+        public int PatientId { get; set; }
+        public string? Diagnosis { get; set; }
+        public string? Treatment { get; set; }
+        public DateTime? DateRecorded { get; set; }
+        // Navigation Property
+        public Patient? Patient { get; set; }
+    }
+}
