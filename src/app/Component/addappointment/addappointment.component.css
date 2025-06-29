@@ -1,0 +1,136 @@
+/* 🌟 Full-Page Centered Layout */
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #3498db, #2c3e50);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 📌 Main Container */
+.appointment-container {
+  text-align: center;
+  padding: 80px; /* Increased padding for a more spacious feel */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 95%;
+  max-width: 1100px; /* Expanding to cover the whole page */
+}
+
+/* 🏆 Headings */
+h2, h3 {
+  font-size: 32px; /* Bigger, more visible headings */
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ✅ Form Styling */
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+input {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🎯 Buttons */
+button {
+  padding: 14px 22px;
+  margin: 20px 10px; /* Ensuring gap between buttons */
+  border: none;
+  border-radius: 10px;
+  background: #2980b9;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+  background: #1f669d;
+  transform: scale(1.05);
+}
+
+/* 📌 Doctor & Slot Selection */
+.doctor-container, .slots-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Increased gap for better spacing */
+}
+
+/* 🩺 Doctor Cards */
+.doctor-card {
+  border: 2px solid #007bff;
+  background-color: #f0f3f4;
+  padding: 20px;
+  width: 280px; /* Increased width */
+  text-align: center;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-family: 'Poppins', sans-serif;
+}
+
+.doctor-card:hover {
+  background: #e0f2ff;
+}
+
+.doctor-card.selected {
+  border: 2px solid #28a745;
+  background-color: #d4edda;
+}
+
+/* 🕒 Slot Boxes */
+.slot-box {
+  border: 2px solid #007bff;
+  background-color: #e0f2ff;
+  padding: 12px;
+  width: 200px;
+  text-align: center;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.slot-box:hover {
+  background: #cce5ff;
+}
+
+.slot-box.selected {
+  border: 2px solid #28a745;
+  background-color: #d4edda;
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .appointment-container {
+      width: 98%;
+      padding: 60px;
+  }
+
+  .button-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  button {
+      width: 100%;
+      margin: 15px 0;
+  }
+}

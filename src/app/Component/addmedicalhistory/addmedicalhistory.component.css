@@ -1,0 +1,115 @@
+/* 🌟 Full-Page Centered Layout */
+html, body {
+    height: 100%; /* ✅ Guarantees full-page coverage */
+    width: 100%;
+    margin: 0; /* ✅ Removes unwanted margins */
+    padding: 0; /* ✅ Ensures no extra spacing */
+    display: flex;
+    justify-content: center; /* ✅ Centers content vertically */
+    align-items: center; /* ✅ Centers content horizontally */
+    background: linear-gradient(to right, #283e51, #4a90e2);
+    background-size: cover; /* ✅ Ensures proper stretching */
+    background-repeat: no-repeat; /* ✅ Eliminates background tiling */
+    background-position: center; /* ✅ Forces center alignment */
+    overflow: hidden; /* ✅ Prevents unwanted scrolling */
+}
+
+
+/* ✅ Apply Poppins Font to All Text Elements */
+h2, label, input, button, p, .container {
+    font-family: 'Poppins', sans-serif; /* ✅ Global font application */
+}
+
+/* 📌 Main Container - Perfectly Centered */
+.container {
+    text-align: center;
+    padding: 80px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    width: 60%;
+    max-width: 800px; /* ✅ Ensures balance */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🏆 Headings */
+h2 {
+    font-size: 40px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* ✅ Form Styling */
+form {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 🎯 Labels & Inputs */
+label {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    background: #f9f9f9;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* 🎯 Buttons */
+button {
+    padding: 16px 26px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Primary Button */
+.btn-primary {
+    background: linear-gradient(to right, #007bff, #00c3ff);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #0056b3, #0099cc);
+    transform: scale(1.07);
+}
+
+/* ✅ Desktop Optimization */
+@media (min-width: 1024px) {
+    .container {
+        width: 65%;
+        padding: 100px;
+    }
+
+    button {
+        width: 50%;
+    }
+}

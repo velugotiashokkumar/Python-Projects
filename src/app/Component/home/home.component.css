@@ -1,0 +1,130 @@
+/* 🌟 Overall Page Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* ✅ Ensures full-page coverage */
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #f9faf9, #f9faf9);
+  color: white;
+  text-align: center;
+}
+
+/* 📌 Header Styling */
+.header {
+  display: flex;
+  justify-content: center; /* Center align buttons */
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);;
+}
+
+
+/* 🎯 Button Styling */
+.header button {
+  padding: 14px 28px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  font-weight: bold;
+  margin: 10px;
+}
+
+.logout-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Keeps it above other elements */
+}
+
+.logout-btn {
+  background: linear-gradient(to right, #ff4b2b, #ff416c); /* Red gradient */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, #e63946, #ff5c72); /* Darker red gradient */
+}
+
+h1 {
+    color: black; /* ✅ Ensures the text appears in black */
+    font-size: 36px; /* ✅ Adjusts the size for better visibility */
+    font-weight: bold;
+}
+
+/* 🔘 Different Button Styles */
+.Today {
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  color: white;
+}
+
+.Add {
+  background: linear-gradient(45deg, #007bff, #00c6ff);
+  color: white;
+}
+
+.header button:hover {
+  transform: scale(1.08);
+  opacity: 0.9;
+}
+
+/* 🌟 Container & Blocks */
+.container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 📊 Total Hours & Appointments */
+.block {
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+  width: 40%;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* 🕒 Hours Worked */
+.hours {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+}
+
+/* 📅 Total Appointments */
+.appointments {
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  color: white;
+}
+
+/* 📌 Responsive Layout */
+@media (max-width: 768px) {
+  .container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .block {
+      width: 80%;
+      margin-bottom: 15px;
+  }
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor's Dashboard</title>
+</head>
+<body>
+    <div class="logout-container">
+        <button (click)="logout()" class="logout-btn">↩Logout</button>
+      </div> 
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>👨‍⚕️ Welcome, Doctor!</h1>
+        <button class="Today" routerLink="/app-patient-history" routerLinkActive="active">📖 Patient History</button>
+        <button class="Today" routerLink="/app-doctorstodaysapp" routerLinkActive="active">🗓️ Today's Schedule</button>
+        <button class="Add" routerLink="/app-add-slots" routerLinkActive="active">➕ Add Schedule</button>
+    </div>
+  
+    <!-- Main Dashboard -->
+    <div class="container">
+        <div class="block hours">
+            <h2>⏳ Total Hours Worked</h2>
+            <p>{{ totalHours }} hours</p>
+        </div>
+        <div class="block appointments">
+            <h2>💼 Total Appointments</h2>
+            <p>{{ totalAppointments }}</p>
+        </div>
+    </div>
+
+</body>
+</html>

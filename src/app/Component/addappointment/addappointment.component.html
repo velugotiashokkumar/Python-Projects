@@ -1,0 +1,36 @@
+<section class="appointment-container">
+  <h2>📅 Book an Appointment</h2>
+
+  <!-- Patient ID Input -->
+  <label for="patientId">Patient ID:</label>
+  <input type="number" id="patientId" [(ngModel)]="patientId" name="patientId" required [readonly]="userRole === 'Patient'"/>
+  <p *ngIf="patientId !== null"><strong>Auto-filled Patient ID:</strong> {{ patientId }}</p>
+
+  <!-- Doctor Selection -->
+  <h3>👨‍⚕️ Select a Doctor</h3>
+  <div *ngIf="doctors.length > 0" class="doctor-container">
+      <div *ngFor="let doctor of doctors" class="doctor-card" [class.selected]="doctor.doctorId === selectedDoctorId" (click)="selectDoctor(doctor.doctorId)">
+          <p><strong>ID:</strong> {{ doctor.doctorId }}</p>
+          <p><strong>Name:</strong> {{ doctor.doctorName }}</p>
+          <p><strong>Specialization:</strong> {{ doctor.specialization }}</p>
+      </div>
+  </div>
+
+  <label for="date">📆 Select Date:</label>
+  <input type="date" [(ngModel)]="selectedDate" name="date" required />
+
+  <!-- Slot Selection -->
+  <button (click)="fetchSlots()">🔍 Check Available Slots</button>
+
+  <div *ngIf="slots.length > 0" class="slots-container">
+      <h3>🕒 Available Slots</h3>
+      <div *ngFor="let slot of slots" class="slot-box" [class.selected]="slot.slotId === selectedSlotId" (click)="selectSlot(slot.slotId)">
+          <p><strong>ID:</strong> {{ slot.slotId }}</p>
+          <p><strong>Start:</strong> {{ slot.startTime }}</p>
+          <p><strong>End:</strong> {{ slot.endTime }}</p>
+      </div>
+  </div>
+
+  <button (click)="bookAppointment()">✅ Confirm Appointment</button>
+  <button (click)="goBack()" class="btn btn-danger">🔙 Back</button>
+</section>

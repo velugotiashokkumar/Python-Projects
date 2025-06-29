@@ -1,0 +1,72 @@
+/* 🌟 Full-Page Layout */
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #4a90e2, #2c3e50);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* 📌 Contact Section with Outline */
+.contact-container {
+    text-align: center;
+    padding: 60px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(12px);
+    width: 80%;
+    max-width: 600px;
+    outline: 4px solid rgb(184, 142, 225); /* Adds a clear outline */
+}
+
+/* 🏆 Headings with Outlines */
+h1 {
+    font-size: 42px;
+    font-weight: bold;
+    color: rgb(29, 57, 70);
+    outline: 5px dashed rgb(184, 142, 225); /* Dashed outline for a stylish touch */
+    padding: 10px;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+}
+
+h3 {
+    font-size: 22px;
+    outline: 3px dotted #ffcc00; /* Dotted outline effect for better readability */
+    padding: 5px;
+    margin: 15px 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 📞 Phone Links */
+.contact-details a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+.contact-details a:hover {
+    color: #ffea50;
+    text-decoration: underline;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 600px) {
+    .contact-container {
+        width: 90%;
+        padding: 40px;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+}

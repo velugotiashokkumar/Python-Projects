@@ -1,0 +1,142 @@
+/* 🌟 Full-Page Centered Layout */
+body {
+  min-height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* ✅ Ensures vertical centering */
+  align-items: center; /* ✅ Ensures horizontal centering */
+  background: linear-gradient(to right, #4a90e2, #2c3e50);
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+}
+
+/* 📌 Main Container - Fully Centered */
+.container {
+  text-align: center;
+  padding: 80px; /* ✅ More spacious */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 950px; /* ✅ Expands full width while staying balanced */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 🏆 Headings */
+h2 {
+  font-size: 40px; /* ✅ Bigger size */
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ✅ Form Styling */
+form {
+  width: 100%;
+  text-align: center;
+  
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+  background: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🎯 Buttons */
+button {
+  padding: 16px 26px;
+  margin-top: 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Primary Button */
+.btn-primary {
+  background: linear-gradient(to right, #007bff, #00c3ff);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.3);
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(to right, #0056b3, #0099cc);
+  transform: scale(1.07);
+}
+
+/* Danger Button */
+.btn-danger {
+  background: linear-gradient(to right, #ff4b5c, #ff6e7f);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0px 6px 12px rgba(255, 75, 92, 0.3);
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-danger:hover {
+  background: linear-gradient(to right, #d13a49, #cc5a68);
+  transform: scale(1.07);
+}
+
+/* 📌 Appointment Table */
+.appointment-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+}
+
+.appointment-table th, .appointment-table td {
+  border: 1px solid #ddd;
+  padding: 14px;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🎨 Table Styling */
+.appointment-table th {
+  background: #007bff;
+  color: white;
+}
+
+.appointment-table tr:nth-child(even) {
+  background: #f2f2f2;
+}
+
+/* ✅ Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+      width: 90%;
+      padding: 60px;
+  }
+
+  button {
+      width: 100%;
+  }
+}

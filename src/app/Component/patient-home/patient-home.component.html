@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Dashboard</title>
+    <link rel="stylesheet" href="patient-home.component.css"> <!-- External CSS file -->
+    
+</head>
+<body>
+    <div>
+        <button (click)="logout()" class="btn btn-danger m-2">Logout</button>
+      </div>
+
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>👩‍⚕️ Hello, Patient!</h2>
+        <p>Manage your appointments, medical history, and ongoing treatments effortlessly.</p>
+
+        <div class="button-container">
+            <button class="hero-btn" [routerLink]="'/app-addappointment'">📅 Book Appointment</button>
+            <button class="hero-btn" [routerLink]="'/app-patient-upcomingapp'">🔍 Upcoming Appointments</button>
+            <button class="hero-btn" [routerLink]="'/app-addmedicalhistory'">📝 Add Medical History</button>
+            <button class="hero-btn" [routerLink]="'/app-patient-history'">📖 View Medical History</button>
+        </div>
+    </section>
+
+    <section class="dashboard">
+        <div class="info-box">
+            <h3>👨‍⚕️ For Appointment Contact</h3>
+            <p><strong>Staff Name:</strong> {{ staffName }}</p>
+            <p><strong>Staff Contact:</strong> {{ staffContact }}</p>
+        </div>
+    
+        <!-- Modification Section -->
+        <div class="info-box">
+            <h3>🛠️ For Modification or Cancel</h3>
+            <p><strong>Name:</strong> {{ modifiedName }}</p>
+            <p><strong>Contact:</strong> {{ modifiedContact }}</p>
+        </div>
+    </section>
+    <!-- <div>
+        <button (click)="logout()" class="btn btn-danger m-2">logout</button>
+      </div> -->
+
+</body>
+</html>

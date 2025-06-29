@@ -1,0 +1,37 @@
+<!-- 🌟 Doctor's Appointments Page -->
+<div class="container">
+  <div class="appointment-card">
+      <h2>Doctor's Appointments Today</h2>
+
+      <!-- Doctor ID Input -->
+      <label for="doctor">Enter Doctor ID:</label>
+      <input type="number" [(ngModel)]="doctorId" name="doctor" required />
+
+      <!-- Buttons -->
+      <div class="button-container">
+          <button (click)="fetchTodaysAppointments()">Get Appointments</button>
+          <button (click)="goBack()" class="btn btn-danger">Back</button>
+      </div>
+
+      <!-- Display Appointments -->
+      <div *ngIf="appointments.length > 0" class="appointments-table">
+          <h3>Today's Appointments</h3>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Patient ID</th>
+                      <th>Appointment Time</th>
+                      <th>Status</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr *ngFor="let appointment of appointments">
+                      <td>{{ appointment.patientId }}</td>
+                      <td>{{ appointment.appointmentDate | date:'yyyy-MM-dd HH:mm' }}</td>
+                      <td>{{ appointment.status }}</td>
+                  </tr>
+              </tbody>
+          </table>
+      </div>
+  </div>
+</div>

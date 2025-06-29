@@ -1,0 +1,35 @@
+<div class="container">
+  <h2>📖 Patient Medical History</h2>
+
+  <label for="phone">📞 Enter Mobile Number:</label>
+  <input type="text" [(ngModel)]="phoneNumber" name="phone" placeholder="Enter phone number" required />
+
+  <div class="button-container">
+      <button (click)="fetchMedicalHistory()" class="btn-primary">🔍 Get Medical History</button>
+  </div>
+
+  <div>
+      <button (click)="goBack()" class="btn-danger">🔙 Back</button>
+  </div>
+
+  <!-- Display Medical History -->
+  <div *ngIf="medicalHistory.length > 0">
+      <h3>📋 Medical History Records</h3>
+      <table class="history-table">
+          <thead>
+              <tr>
+                  <th>💉 Diagnosis</th>
+                  <th>💊 Treatment</th>
+                  <th>📅 Date Recorded</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let record of medicalHistory">
+                  <td>{{ record.diagnosis }}</td>
+                  <td>{{ record.treatment }}</td>
+                  <td>{{ record.dateRecorded | date:'yyyy-MM-dd HH:mm' }}</td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+</div>

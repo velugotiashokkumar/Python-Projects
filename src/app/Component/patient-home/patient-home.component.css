@@ -1,0 +1,149 @@
+/* 🌟 Full-Page Layout */
+body {
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(to right, #4a90e2, #2c3e50);
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* 🌟 Ensure Logout Button is in Top Right */
+logout-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000; /* Keeps it above other elements */
+  }
+/* 🎯 Styled Logout Button */
+.logout-btn {
+    background: linear-gradient(to right, #ff4b2b, #ff416c); /* Red gradient */
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #e63946, #ff5c72); /* Darker red gradient */
+}
+
+/* 📱 Responsive Tweaks */
+@media (max-width: 768px) {
+    .logout-container {
+        top: 5px;
+        right: 5px;
+    }
+
+    .logout-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
+
+
+/* 🎯 Styling for Logout Button */
+.btn-danger {
+    background: crimson;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.btn-danger:hover {
+    background: darkred;
+    transform: scale(1.05);
+}
+
+/* 📌 Hero Section */
+.hero {
+    text-align: center;
+    padding: 80px;
+    width: 80%;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+}
+
+/* 📅 Buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.hero-btn {
+    padding: 14px 28px;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease-in-out;
+    font-weight: bold;
+    color: #200db4;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.hero-btn:hover {
+    transform: scale(1.08);
+    opacity: 0.9;
+}
+
+/* 🌟 Dashboard */
+.dashboard {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    padding: 40px;
+    width: 85%;
+    max-width: 1300px;
+}
+
+/* 🏆 Info Box */
+.info-box {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    padding: 30px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+/* 📌 Responsive Adjustments */
+@media (max-width: 768px) {
+    .dashboard {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+
+    .hero {
+        width: 90%;
+        padding: 60px;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-btn {
+        width: 100%;
+    }
+}

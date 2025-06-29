@@ -1,0 +1,130 @@
+/* 🌟 Full-Page Coverage & Centered Content */
+body {
+    height: 100vh;
+    width: 100vw; /* ✅ Covers the full viewport */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, #1e3c72, #2a5298); /* ✅ Deep gradient for a modern feel */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ✅ Apply Poppins Font Globally */
+h2, label, input, button, p, .alert {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* 📌 Main Container - Fully Centered */
+.container {
+    text-align: center;
+    padding: 80px;
+    background: rgba(255, 255, 255, 0.98); /* ✅ Slightly stronger contrast for readability */
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* ✅ Enhanced shadow for depth */
+    width: 50%;
+    min-width: 500px; /* ✅ Ensures form stays properly sized */
+    max-width: 800px; /* ✅ Wider coverage for desktop */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 🏆 Headings */
+h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 25px;
+}
+
+/* ✅ Form Styling */
+.form-group {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+input {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 18px;
+    background: #f9f9f9;
+}
+
+/* 🎯 Buttons */
+button {
+    padding: 16px 24px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Primary Button */
+.btn-primary {
+    background: linear-gradient(to right, #007bff, #00c3ff);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 6px 12px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to right, #0056b3, #0099cc);
+    transform: scale(1.07);
+}
+
+/* Danger Button */
+.btn-danger {
+    background: linear-gradient(to right, #ff4b5c, #ff6e7f);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 6px 12px rgba(255, 75, 92, 0.3);
+}
+
+.btn-danger:hover {
+    background: linear-gradient(to right, #d13a49, #cc5a68);
+    transform: scale(1.07);
+}
+
+/* Success & Error Alerts */
+.alert {
+    font-size: 18px;
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 10px;
+}
+
+.alert-success {
+    background: #28a745;
+    color: white;
+}
+
+.alert-danger {
+    background: #dc3545;
+    color: white;
+}
+
+/* 📱 Desktop Optimization */
+@media (min-width: 1024px) {
+    .container {
+        width: 55%; /* ✅ Slightly wider for large screens */
+        padding: 100px;
+    }
+
+    button {
+        width: 50%; /* ✅ Balanced button size */
+    }
+}
