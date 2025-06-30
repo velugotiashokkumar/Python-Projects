@@ -1,0 +1,111 @@
+/* 🌟 Full-Page Centered Layout */
+body {
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, #1e3c72, #2a5298); /* Enhanced gradient */
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 📌 Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px; /* Larger spacing for full-page experience */
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  width: 85%;
+  max-width: 1100px; /* Wider, making it feel immersive */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 🌟 Ensure Logout Button is in Top Right */
+.logout-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000; /* Keeps it above other elements */
+}
+
+.logout-btn {
+  background: linear-gradient(to right, #ff4b2b, #ff416c); /* Red gradient */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logout-btn:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to right, #e63946, #ff5c72); /* Darker red gradient */
+}
+
+/* 🏆 Headings */
+h2 {
+  font-size: 40px; /* Bigger text for dominance */
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+p {
+  font-size: 22px;
+  color: #555;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* 🎯 Buttons */
+.button-container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Ensures proper spacing */
+  gap: 20px;
+}
+
+.hero-btn {
+  background: #3498db;
+  color: white;
+  border: none;
+  padding: 16px 32px;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hero-btn:hover {
+  background: #2074a0;
+  transform: scale(1.1);
+}
+
+/* 📱 Mobile Responsive */
+@media (max-width: 768px) {
+  .hero {
+      width: 95%;
+      padding: 80px;
+  }
+
+  .button-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .hero-btn {
+      width: 100%;
+  }
+  
+}

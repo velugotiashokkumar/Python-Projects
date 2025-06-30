@@ -1,0 +1,21 @@
+<section class="hero">
+
+  <h2>Welcome, Staff!</h2>
+  <p>Your daily management tools at your fingertips.</p>
+  
+  <div class="logout-container">
+    <button (click)="logout()" class="logout-btn">Logout</button>
+  </div>
+
+  <div class="button-container">
+      <button class="hero-btn" [routerLink]="'/app-addappointment'">➕ Add Appointment</button>
+      <button class="hero-btn" [routerLink]="'/app-add-slots'">🕒 Add Slots</button>
+      <button class="hero-btn" [routerLink]="'/app-add-doctor'">👨‍⚕️ Add Doctor</button>
+      <!-- <button class="hero-btn" [routerLink]="'/app-today-appointments'">📅 Today’s Appointments</button> -->
+      <button class="hero-btn" [routerLink]="'/app-doctor-details'">🔍 Doctor Details</button>
+    
+  </div>
+  <!-- <div>
+    <button (click)="logout()" class="btn btn-danger m-2">logout</button>
+  </div> -->
+</section>
